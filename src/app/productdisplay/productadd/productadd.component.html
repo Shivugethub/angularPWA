@@ -1,0 +1,32 @@
+<div class="container">
+  <form (ngSubmit)="onSaveProduct(f)"   #f="ngForm" >
+    <div class="form-group">
+      <Label>Product Name<span class='text-danger'>*</span></Label>
+      <input name="pro_name"  ngModel name='pro_name' class="form-control" placeholder="Enter Product Name" required>
+    </div>
+    <div class="form-group">
+      <Label>Product price<span class='text-danger'>*</span></Label>
+      <input name="pro_price" ngModel type="number" class="form-control" placeholder="Enter Product price" required>
+    </div>
+    <div class="form-group">
+      <Label>Product Desc<span class='text-danger'>*</span></Label>
+      <input name="pro_desc" ngModel class="form-control" placeholder="Enter Product Desc" required>
+    </div>
+    <div class="form-group">
+      <Label>Product Qty<span class='text-danger'>*</span></Label>
+      <input name="pro_qty" ngModel type="number" class="form-control" placeholder="Enter Product Qty" required>
+    </div>
+    <div class="form-group">
+      <Label>Product mfg<span class='text-danger'>*</span></Label>
+      <input name="pro_mfg" ngModel class="form-control" placeholder="Enter Product mfg" required>
+    </div>
+    <div class="form-group">
+      <Label>Product Img Path<span class='text-danger'>*</span></Label>
+      <input name="pro_img" ngModel class="form-control" placeholder="Enter Product Img" required>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary" [disabled]='f.invalid'>Add New Product</button>|
+      <button type='button' class='btn btn-warning' (click)='onCancel()'>Cancel</button>
+    </div>
+  </form>
+</div>

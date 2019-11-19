@@ -1,0 +1,20 @@
+<div class="container bg-warning">
+  <table class="table table-responsive">
+    <thead class='text-success'>
+      <th>Email</th>
+      <th>Name</th>
+      <th>Mobile No</th>
+      <th>Action</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of arr" >
+        <td>{{item.user_email}}</td>
+        <td>{{item.user_name}}</td>
+        <td>{{item.user_mobile_no}}</td>
+        <td><button class="btn btn-danger" (click)="onUserDelete(item)">Delete</button>|
+        <button class="btn btn-info" (click)="onUserEdit(item)">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+    </table>
+</div>
