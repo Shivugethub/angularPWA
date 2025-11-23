@@ -18,7 +18,7 @@ export class ProductdisplayComponent implements OnInit {
         this.arr = data;
       },
       function(error) {
-        alert(error);
+        console.log(`Failed to load all products on page load : ${error}`);
       },
       function() {}
     );
@@ -40,7 +40,7 @@ export class ProductdisplayComponent implements OnInit {
           this.arr = data;
         },
         function(error) {
-          alert(error);
+          console.log(`Failed to load all products on sidebar click : ${error}`);
         },
         function() {}
       );
